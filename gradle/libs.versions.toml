@@ -1,0 +1,80 @@
+[versions]
+agp = "8.5.0-alpha08"
+kotlin = "1.9.0"
+ksp = "1.9.20-1.0.14"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.9.0"
+constraintlayout = "2.1.4"
+navigation = "2.7.7"
+coroutines = "1.8.0"
+room = "2.6.1"
+viewBindingDelegate = "1.5.9"
+koin = "3.5.3"
+jetpack-lifecycle = "2.7.0"
+retrofit = "2.9.0"
+logging-interceptor = "4.11.0"
+glide = "4.16.0"
+splashscreen = "1.0.1"
+jetbrainsKotlinJvm = "1.9.0"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+
+#UI
+ui-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+ui-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+ui-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+ui-viewBindingDelegate = { group = "com.github.kirich1409", name = "viewbindingpropertydelegate-noreflection", version.ref = "viewBindingDelegate" }
+ui-glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+ui-splashscreen = {  group = "androidx.core", name = "core-splashscreen", version.ref = "splashscreen"  }
+
+#Navigation
+navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
+
+#Coroutines
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+
+#Koin
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+
+#Lifecycle
+lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "jetpack-lifecycle" }
+lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "jetpack-lifecycle" }
+lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "jetpack-lifecycle" }
+
+#Room
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+
+#Retrofit
+retrofit2-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit2-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+okhttp3-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "logging-interceptor" }
+
+#Test
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+navigation-safeArgs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+google-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+[bundles]
+ui = ["ui-material","ui-constraintlayout", "ui-activity", "ui-viewBindingDelegate", "ui-splashscreen", "ui-glide"]
+lifecycle = ["lifecycle-livedata", "lifecycle-viewmodel", "lifecycle-runtime"]
+retrofit = ["retrofit2-retrofit", "retrofit2-converter-gson", "okhttp3-logging-interceptor"]
